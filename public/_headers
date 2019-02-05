@@ -1,0 +1,22 @@
+## Created with gatsby-plugin-netlify
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/sw.js
+  Cache-Control: no-cache
+/offline-plugin-app-shell-fallback/
+  Link: </webpack-runtime-78ea0114c2bde4513b54.js>; rel=preload; as=script
+  Link: </component---node-modules-gatsby-plugin-offline-app-shell-js-09399fcc9d33448bfe8f.js>; rel=preload; as=script
+/cordova-bay-living-room-and-bedroom
+  Link: </webpack-runtime-78ea0114c2bde4513b54.js>; rel=preload; as=script
+  Link: </0-2ee54a8bc0414d04d5ac.js>; rel=preload; as=script
+/staining-doors
+  Link: </webpack-runtime-78ea0114c2bde4513b54.js>; rel=preload; as=script
+  Link: </0-2ee54a8bc0414d04d5ac.js>; rel=preload; as=script
+/
+  Link: </webpack-runtime-78ea0114c2bde4513b54.js>; rel=preload; as=script
+  Link: </0-2ee54a8bc0414d04d5ac.js>; rel=preload; as=script
