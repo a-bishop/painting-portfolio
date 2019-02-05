@@ -38,7 +38,7 @@ const Index = ({
   },
 }) => (
   <Layout>
-    <Header avatar={config.avatar} name={config.name} location={config.location} moreInfo={config.moreInfo}/>
+    <Header avatar={config.avatar} name={config.name} location={config.location} moreInfo={config.moreInfo} />
     <BG>
       <Content>
         <Grid>
