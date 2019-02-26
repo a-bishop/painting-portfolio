@@ -3,7 +3,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const Wrapper = styled.div`
-  background: url("${props => props.theme.bgPattern}")   #4c4c4c;
+  background: url("${props => props.theme.bgPattern}") #333333;
   display: flex;
   position: relative;
 `;
