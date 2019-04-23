@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   padding: 3rem 0;
   a {
-    color: ${props => props.theme.colors.color};
+    color: ${props => props.theme.colors.dark_bg};
     display: flex;
     align-items: center;
     font-size: 1.25rem;

@@ -17,7 +17,7 @@ const Content = styled.div`
   width: 100%;
   max-width: ${props => props.theme.maxWidths.general};
   padding: 2rem 1.0875rem 5rem 1.0875rem;
-  color: ${props => props.theme.colors.secondary};
+  color: ${props => props.theme.colors.color};
 `
 
 const Back = styled(Link)`
@@ -82,7 +82,9 @@ const ProjectHeader = ({ avatar, name, title, date, areas, text }) => (
       <Back to="/">
         <img src={arrow} data-info="back" alt="Back to home" aria-label="Back to home" />
         <Avatar>
-          <div><img src={avatar} alt={name} /></div>
+          <div>
+            <img src={avatar} alt={name} />
+          </div>
         </Avatar>
         <Name>{name}</Name>
       </Back>

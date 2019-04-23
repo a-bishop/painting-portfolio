@@ -8,7 +8,7 @@ module.exports = {
   siteUrl: 'http://painting.abishop.me', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/paintbrush.png', // Used for SEO and manifest
-  siteDescription: 'A Bishop Painting – Professional Painting Service in Victoria, BC',
+  siteDescription: 'A Bishop Painting ï¿½ Professional Painting Service in Victoria, BC',
   author: 'ABishop', // Author for schema.org JSONLD
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional

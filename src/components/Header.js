@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import PropTypes from "prop-types";
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 const Wrapper = styled.div`
   background: url("${props => props.theme.bgPattern}") #333333;
   display: flex;
   position: relative;
-`;
+`
 
 const Content = styled.div`
   margin: 0 auto;
@@ -18,7 +18,7 @@ const Content = styled.div`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     height: 500px;
   }
-`;
+`
 
 const Avatar = styled.div`
   height: 80px;
@@ -28,19 +28,19 @@ const Avatar = styled.div`
   image-rendering: -o-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   -ms-interpolation-mode: nearest-neighbor;
-`;
+`
 
 const Name = styled.h1`
   margin: 1rem 0 0.25rem 0;
   color: ${props => props.theme.colors.color};
-`;
+`
 
 const Location = styled.div`
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-`;
+`
 
 const MoreInfo = styled.div`
   font-size: 1.2rem;
@@ -48,7 +48,7 @@ const MoreInfo = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 1.5rem;
-`;
+`
 
 const Contact = styled.div`
   font-size: 1rem;
@@ -57,7 +57,7 @@ const Contact = styled.div`
   justify-content: center;
   padding-top: 1.5rem;
   line-height: 1.5rem;
-`;
+`
 
 const contact = (
   <span>
@@ -65,7 +65,7 @@ const contact = (
     <br />
     <a href="mailto:andrew.bishop53@gmail.com">Contact me</a> for a quote
   </span>
-);
+)
 
 const Header = ({ avatar, name, location, moreInfo }) => (
   <Wrapper>
@@ -79,13 +79,13 @@ const Header = ({ avatar, name, location, moreInfo }) => (
       <Contact>{contact}</Contact>
     </Content>
   </Wrapper>
-);
+)
 
-export default Header;
+export default Header
 
 Header.propTypes = {
   avatar: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  moreInfo: PropTypes.string.isRequired
-};
+  moreInfo: PropTypes.string.isRequired,
+}

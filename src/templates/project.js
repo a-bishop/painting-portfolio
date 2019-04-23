@@ -3,6 +3,7 @@ import Img from 'gatsby-image'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import { withWindowSizeListener } from 'react-window-size-listener'
 
 import { Layout, ProjectHeader, ProjectPagination, SEO } from '../components'
 import config from '../../config/site'
@@ -24,9 +25,19 @@ const InnerWrapper = styled.div`
   margin: 0 auto;
 `
 
-const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode, images: imgs } }) => {
+const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode, images: imgs }, windowSize }) => {
   const images = imgs.edges
   const project = postNode.frontmatter
+  const wWidth = windowSize.windowWidth
+  let imgMargin
+
+  if (wWidth > 1100) {
+    imgMargin = '3rem 12rem'
+  } else if (wWidth > 800) {
+    imgMargin = '3rem 8rem'
+  } else {
+    imgMargin = '3rem auto'
+  }
 
   return (
     <Layout customSEO>
@@ -46,7 +57,7 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
               <Img
                 key={image.node.childImageSharp.fluid.src}
                 fluid={image.node.childImageSharp.fluid}
-                style={{ margin: '3rem 0' }}
+                style={{ margin: imgMargin }}
               />
             ))}
           </InnerWrapper>
@@ -57,7 +68,7 @@ const Project = ({ pageContext: { slug, prev, next }, data: { project: postNode,
   )
 }
 
-export default Project
+export default withWindowSizeListener(Project)
 
 Project.propTypes = {
   pageContext: PropTypes.shape({
@@ -69,6 +80,7 @@ Project.propTypes = {
     project: PropTypes.object.isRequired,
     images: PropTypes.object.isRequired,
   }).isRequired,
+  windowSize: PropTypes.object.isRequired,
 }
 
 Project.defaultProps = {
